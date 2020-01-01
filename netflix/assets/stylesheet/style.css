@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding-top: 1rem;
+}
+
+nav img {
+    width: 258px;
+    height: 120px;
+    padding-top: 0.5rem;
+    background: transparent;
+}
+
+.btn {
+    background-color: #E50914;
+    padding: 0.7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 3rem;
+} 
+
+.sect1 {
+    background-image: linear-gradient(to right, #010101, #110f11, #1c181a, #272122,
+     #322929, #342a2a, #362b2b,
+    #382c2c, #30252a, #261f28,
+     #1a1b24, #0c161f);
+     height: 110vh;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    text-align: center;
+    margin-top: 3rem;
+}
+.top-heading {
+    margin-bottom: 5rem;
+}
+
+.top-heading h1 {
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    font-weight: bolder;
+    word-spacing: 0.4rem;
+}
+
+.netflix-h1 {
+    margin-top: -3rem;
+}
+
+.middle-heading {
+    margin-top: -2.5rem;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: row;
+    width: 65rem;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.days {
+    color: #00d65f;
+    font-weight: 600;
+    text-align: left;
+}
+
+.bill {
+    color: #8c8c8c;
+    font-size: 1.5em;
+    letter-spacing: 0.01em;
+    font-weight: 200;
+}
+
+.bill-date {
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.progress-bar {
+    position: relative;
+    width: 65rem;
+    height: 2.5em;
+    background-image: linear-gradient(to right,
+     #00d65f,
+     #00bd93, #009faa,
+     #007fa0, #3b5f7c, #435268, #434753, #3d3d3f,
+     #3b3c3f, #393a3f, #37393f, #35383f, #30252a, #1a1b24);
+    border-radius: 1.5em;
+    border: none;
+    color: #fff;
+}
+
+.progress-bar::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0.5em;
+    top: 0em;
+    bottom: 0em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 0em;
+    max-width: calc(55% - 3em);
+    background-color: #00d65f;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.after-bar {
+    margin-top: 2.7rem;
+    margin-right: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.after-bar::before {
+    content: "";
+    position: absolute;
+    top: -5.2rem;
+    left: 1rem;
+    height: 4.5rem;
+    width: 0.2rem;
+    background-color: #000;
+}
+
+.bill-date::after {
+    content: "";
+    position: absolute;
+    top: 2em;
+    left: 2.8em;
+    z-index: 4;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.bill-date-final {
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    top: 50%;
+    right: 90%;
+}
+
+.bill-date-final::after {
+    content: "";
+    position: absolute;
+    top: 2.9em;
+    left: 0.7em;
+    z-index: 4;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.email-text {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    word-spacing: 0.35rem;
+}
+
+.email-box {
+    margin-top: -3rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.free {
+    height: 100%;
+    width: 70%;
+    background-color: #E30813;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.text {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sect2 {
+    height: 75vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "tv tv-img";
+    grid-template-columns: "40% 40%";
+    align-items: center;
+    justify-content: center;
+    grid-gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.sect2::before {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 8px;
+    background-color: #222222;
+    position: absolute;
+    overflow-x: hidden;
+    top: 0rem;
+}
+
+
+.sect2 p,
+.sect3 p,
+.sect4 p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    word-spacing: 0.5rem;
+}
+
+
+
+
+.sect2 h2,
+.sect3 h2,
+.sect4 h2 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    word-spacing: 0.2rem;
+}
+
+
+.sect3 {
+    height: 65vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "tv tv-img";
+    grid-template-columns: "40% 40%";
+    align-items: center;
+    justify-content: center;
+    grid-gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.sect3::before,
+.sect4::before,
+.sect5::before,
+.footers::before {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 8px;
+    background-color: #222222;
+    position: absolute;
+    overflow-x: hidden;
+    top: 0rem;
+}
+
+.sect4 {
+    height: 80vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "tv tv-img";
+    grid-template-columns: "40% 40%";
+    align-items: center;
+    justify-content: center;
+    grid-gap: 3rem;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+}
+
+.sect4 .tv,
+.sect4 .tv-img {
+    margin-top: 3rem;
+}
+
+.sect5 {
+    height: 150vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+ .container {
+    width: 65%;
+    margin-top: 2rem;
+}
+
+.freq .wrap{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 2rem;
+}
+
+
+.wrap-link{
+    padding: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.fa-plus {
+    color: #fff;
+    padding: 0.5rem;
+    position: absolute;
+    left: 50%;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-times {
+    color: #fff;
+    padding: 0.5rem;
+    position: absolute;
+    left: 70%;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-plus:hover,
+.fa-times:hover {
+    color: #8c8c8c;
+}
+
+.fa-times {
+    opacity: 0;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    background-color: #af6460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    font-size: 1.5rem;
+    color:  #fff;
+    padding: 2rem;
+    text-align: justify;
+    margin-left: 0rem;
+    line-height: 1.4;
+}
+.container a {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 300;
+}
+
+.wrap-item:target .answer {
+    max-height: 25rem;
+    border-top: 2px solid #000;
+}
+
+.wrap-item:target .wrap-link .fa-plus {
+    display: none;
+}
+
+.wrap-item:target .wrap-link .fa-times {
+    opacity: 1;
+}
+/* 
+.close:hover {
+    color: rosybrown;
+} */
+
+.sect5 h2 {
+    font-size: 3.2rem;
+    line-height: 0.8;
+    word-spacing: 0.9rem;
+}
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5 {
+    background-color: #303030 !important;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+
+.box-faq {
+    margin-top: 2rem;
+}
+
+.footers {
+    height: 50vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footers a {
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.footers a:hover {
+    text-decoration: underline;
+}
+
+.ok,
+.block,
+.net-flix {
+    margin-left: 15rem;
+}
+
+
+.ok {
+    margin-top: 3rem;
+}
+
+.block a {
+    display: block;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.net-flix {
+    color: #a6a6a6;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.ok a {
+    font-size: 1rem;
+}
